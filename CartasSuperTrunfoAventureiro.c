@@ -7,12 +7,13 @@ int main() {
     char estadoC1;
     char codigoCarta1[5];
     char nomecidade1[50];
-    int  populacao1;
+    unsigned long int populacao1;
     float area1;
     float pib1;
     int  pontosTuristicos1;
     float densidadePopulacional1;
     float pibPerCapita1;
+    float superPoder1
 
     // Variáveis para a segunda carta
     char estadoC2;
@@ -21,10 +22,10 @@ int main() {
     int  populacao2;
     float area2;
     float pib2;
-    int  pontosTuristicos2;
+    unsigned long int pontosTuristicos2;
     float densidadePopulacional2;
     float pibPerCapita2;
-
+    float superPoder2
 
     // Entrada de Dados da Carta 1
     printf("CADASTRO DA CARTA 1\n");
@@ -51,9 +52,13 @@ int main() {
     scanf("%d", &pontosTuristicos1);
 
     //calculo da densidade populacional e pib per capita carta 1
-
     densidadePopulacional1 = populacao1 / area1;
     pibPerCapita1 = (pib1 * 1000000000) / populacao1;
+
+    // Calculo do Super poder carta 1
+    superPoder1 = (float)populacao1 + area1 + (pib1 * 1000) + pontosTuristicos1 + pibPerCapita1 + (1.0 / densidadePopulacional1);
+
+    printf("\n");
 
     // Entrada de Dados da Carta 2
     printf("\nCADASTRO DA CARTA 2\n");
@@ -84,6 +89,10 @@ int main() {
     densidadePopulacional2 = populacao2 / area2;
     pibPerCapita2 = (pib2 * 1000000000) / populacao2;
 
+    // Calculo do Super poder carta 2
+    superPoder2 = (float)populacao2 + area2 + (pib2 * 1000) + pontosTuristicos2 + pibPerCapita2 + (1.0 / densidadePopulacional2);
+
+    printf("\n");
 
     // Exibição dos Dados Cadastrados
     printf("\nCARTAS DO SUPER TRUNFO CADASTRADAS\n");
